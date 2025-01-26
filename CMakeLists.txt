@@ -40,7 +40,6 @@ target_compile_options(pll PRIVATE
     -Wpointer-arith
     -Wcast-align
     -fwrapv
-    -m64
     -O3
     -fno-loop-optimize
     -fno-aggressive-loop-optimizations
@@ -64,11 +63,6 @@ target_compile_definitions(pll PRIVATE
     -DNCSTATES=0
     -DHAVESTDIO
     -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
-)
-
-# Linking options
-target_link_libraries(pll PRIVATE
-    ws2_32
 )
 
 # Add as subdirectory if included from another project
