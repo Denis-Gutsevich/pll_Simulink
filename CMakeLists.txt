@@ -64,10 +64,3 @@ target_compile_definitions(pll PRIVATE
     -DHAVESTDIO
     -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
 )
-
-# Add as subdirectory if included from another project
-if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
-    # Build executable if this is the main project
-    add_executable(pll_exe ${START_DIR}/pll_ert_rtw/ert_main.c)
-    target_link_libraries(pll_exe PRIVATE pll)
-endif()
